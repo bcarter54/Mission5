@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Tutoring";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+
+    <h1>@ViewData["Title"]</h1>
+
+    <p>This page is meant for calculating the cost for me to tutor you about the ways of Rocket League</p>
+    
+    @* Inputs and labels used for calculation*@
+    <label for="numHours">Number of Hours: </label>
+    <input type="number" min="0" id="numHours" oninput="validateNumber(this)">
+    <br><br>
+    <label for="rate">Rate per Hour: </label>
+    <input type="number" value="10" readonly id="rate">
+    <br><br>
+    <button type="submit" id="calcTotal">Calculate Total</button>
+    <br><br>
+    <div id="totalCost"></div>
+
+    <br><br>
+    
+    <img src="/img/better_tutor.webp" alt="" width="100%">
+    
+    @* Call in site.js for jQuery*@
+    <script src="js/site.js"></script>
+
+</body>
+</html>
+
